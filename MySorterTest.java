@@ -27,15 +27,8 @@ public class MySorterTest {
 	
 	private void assertArrayEquals (double[] expected, double[] actual)
 	{
-		for (int i = 0; i < actual.length; i++)
-		{
-			if(actual[i] < 0 ){
-				break;
-			}
-			if(i == actual.length-1)
-				actual = m_sort.sort(actual);
-				
-		}
+		
+		actual = m_sort.sort(actual);
 		assertEquals(expected.length, actual.length);
 		for (int i = 0; i < expected.length; i++)
 		{

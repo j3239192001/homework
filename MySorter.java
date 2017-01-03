@@ -5,14 +5,23 @@ public class MySorter
 	
 	public double[] sort (double[] d)
 	{
-		if(d.length != 0){
-			for (int i = 0; i < d.length - 1; i++)
-			{
-				for (int j = 0; j < d.length - i - 1; j++)
+		int negati = 0;
+		for (int i = 0; i < d.length; i++)
+		{
+			if(d[i] < 0 ){
+				negati = 1;
+			}
+		}
+		if(negati != 1){
+			if(d.length != 0){
+				for (int i = 0; i < d.length - 1; i++)
 				{
-					if (d[j] > d[j + 1])
+					for (int j = 0; j < d.length - i - 1; j++)
 					{
-						swap(d, j, j + 1);
+						if (d[j] > d[j + 1])
+						{
+							swap(d, j, j + 1);
+						}
 					}
 				}
 			}
