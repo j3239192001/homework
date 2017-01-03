@@ -1,3 +1,5 @@
+package ntou.cs.sorter;
+
 import static org.junit.Assert.*;
 
 import org.junit.After;
@@ -28,7 +30,6 @@ public class MySorterTest {
 		for (int i = 0; i < actual.length; i++)
 		{
 			if(actual[i] < 0 ){
-				
 				break;
 			}
 			if(i == actual.length-1)
@@ -38,16 +39,6 @@ public class MySorterTest {
 		assertEquals(expected.length, actual.length);
 		for (int i = 0; i < expected.length; i++)
 		{
-			/*System.out.print(i);
-			System.out.print(' ');
-			System.out.print(expected[i]);
-			System.out.print(' ');
-			System.out.print(actual[i]);
-			System.out.print(' ');
-			System.out.print(expected.length);
-			System.out.print(' ');
-			System.out.print(actual.length);
-			System.out.print('\n');*/
 			assertEquals(expected[i], actual[i], 0.0001);
 		}
 	}
