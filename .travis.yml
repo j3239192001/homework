@@ -1,0 +1,10 @@
+language: java
+
+
+
+notifications:
+  email:
+    recipients:
+      - j3239192001@gmail.com
+    on_success: always
+    on_failure: always
